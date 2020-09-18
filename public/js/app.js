@@ -6,8 +6,9 @@ const weather2Tag = document.querySelector(".weather2");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const location = search.value;
-  getWeatherData(location);
   weather1Tag.innerHTML = "Loading...";
+  weather2Tag.innerHTML = "";
+  getWeatherData(location);
 });
 
 function getWeatherData(location) {
@@ -17,7 +18,6 @@ function getWeatherData(location) {
     .then((data) => {
       if (data.error) {
         weather1Tag.innerHTML = data.error;
-        weather2Tag.innerHTML = "";
       } else {
         weather1Tag.innerHTML = data.location;
         weather2Tag.innerHTML = data.forecast;

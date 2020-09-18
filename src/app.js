@@ -52,36 +52,15 @@ app.get("/weather", (req, res) => {
     if (error) {
       return res.send({ error });
     }
-    forecast(
-      latitude,
-      longitude,
-      (error, { weather, degree, feelslike, humidity, forecast } = {}) => {
-        if (error) {
-          return res.send({ error });
-        }
-        res.send({
-          weather,
-          degree,
-          feelslike,
-          humidity,
-          forecast,
-          location,
-          address,
-        });
+    forecast(latitude, longitude, (error, data) => {
+      if (error) {
+        return res.send({ error });
       }
-    );
-  });
-});
-
-app.get("/products", (req, res) => {
-  if (!req.query.search) {
-    return res.send({
-      error: "You must provide a search term.",
+      res.send({
+        location,
+        forecast: data.forecast,
+      });
     });
-  }
-  console.log(req.query);
-  res.send({
-    products: [],
   });
 });
 
