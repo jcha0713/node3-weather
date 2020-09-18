@@ -1,0 +1,79 @@
+@import url("https://use.typekit.net/kfo7uno.css");
+
+h1 {
+  font-size: 48px;
+  margin: 12px 0;
+  font-weight: 700;
+}
+
+ol, ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  padding: 0 10px;
+  background-color: #eee;
+  color: #333;
+  font-family: "monotalic";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  border-bottom: 1px solid rgb(167, 167, 167);
+  padding-bottom: 10px;
+}
+
+nav a {
+  color: #333;
+  margin-right: 4px;
+}
+
+nav a:hover {
+  color: rosybrown;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;
+  border-top: 1px solid rgb(167, 167, 167);
+}
+
+img {
+  width: 120px;
+  padding: 24px 0;
+}
+
+.weatherMain {
+  padding-top: 10px;
+  font-weight: 600;
+  font-family: "Helvetica", sans-serif;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+button {
+  padding: 8px;
+  background-color: #888;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
